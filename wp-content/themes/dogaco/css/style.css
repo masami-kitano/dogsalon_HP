@@ -1,0 +1,1799 @@
+/*
+Theme Name: DogAco
+Theme URI: https://dogaco-trimming.com/
+Description: DogAco
+Author: Kitano Masami
+Author URI: https://dogaco-trimming.com/
+Version: 1.0
+
+*/
+
+/* ========================================
+                all-common
+======================================== */
+html {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+body {
+    font-family: neue-kabel, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    background-color: #FFFDF5;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+header {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: neue-kabel, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+}
+
+.far, .fab, .fas {
+    margin-left: 15px;
+    font-size: 25px;
+    color: #000;
+}
+
+.far:hover, .fab:hover, .fas:hover {
+    color: #D58221;
+}
+
+/* ====================
+  common-header
+==================== */
+#header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    z-index: 10;
+}
+
+#menu-globalnav {
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    margin-bottom: 0;
+    font-family: neue-kabel, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+}
+
+#menu-globalnav > li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+}
+
+#menu-globalnav a {
+    color: #333;
+    text-align: center;;
+}
+
+#menu-globalnav a:hover {
+    color: #D58221;
+    border-bottom: solid 2px #D58221;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: -110px;
+    width: 500px;
+}
+
+.sub-menu li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.menu-item-has-children img {
+    width: 9px;
+    height: 9px;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.menu-about__rotate {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+/* ====================
+  common-main
+==================== */
+#main {
+    margin-bottom: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.main-bg {
+    position: relative;
+    height: 546.67px;
+    margin-bottom: 120px;
+}
+
+.main-bg img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    width: 90%;
+    height: 546.67px;
+    object-fit: cover;
+}
+
+.appear {
+    animation: fadeIn 3s ease 0s 3 normal;
+    -webkit-animation: fadeIn 3s ease 0s 3 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0.2;}
+
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0.2;}
+
+    100% {opacity: 1;}
+}
+
+.fadeIn {
+    -moz-transform: translate3d(0, 30px, 0);
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+    transition: 1s;
+    opacity: 0;
+}
+
+.fadeIn.animated {
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* ====================
+ common-footer
+===================== */
+#footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #D6CFCA;
+}
+
+.return-top {
+    position: absolute;
+    right: 20px;
+    top: -60px;
+}
+
+#page-top {
+    font-size: 40px;
+    color: #A9A9A9;
+}
+
+#footer p {
+    text-align: center;
+}
+
+.footer-img {
+    width: 153px;
+    height: 71px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    color: #A9A9A9;
+    font-size: 8px;
+}
+
+/* ========================================
+                  HOME
+======================================== */
+/* ====================
+home-section共通
+==================== */
+.home-section {
+    margin-bottom: 0px;
+}
+
+.home-section__title {
+    margin-bottom: 30px;
+    font-family: neue-kabel, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.home-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+.home-section__more a:hover {
+    border-bottom: solid 1px #23659D;
+}
+
+.home-section p {
+    margin-bottom: 30px;
+}
+
+.home-section__tel {
+    font-size: 20px;
+}
+
+.home-section__tel a:hover {
+    color: #D58221;
+    border-bottom: solid 1px #D58221;
+}
+
+.home-section__subtitle span {
+    font-size: 9px;
+}
+
+/* ==============================
+ home-about_dog_aco
+============================== */
+.section-about {
+    max-width: 1000px;
+    margin: 0 auto 180px auto;
+}
+
+.section-about h1 {
+    text-align: center;
+}
+
+.section-about section {
+    float: left;
+    width: 33%;
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-about h3 {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.section-about p {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3.about__item-num {
+    font-size: 16px;
+}
+
+p.about__item-title {
+    width: 250px;
+    font-size: 14px;
+}
+
+.section-about__item {
+    font-size: 13px;
+    width: 200px;
+    margin-bottom: 150px;
+}
+
+p.section-about__img {
+    margin-bottom: 23px;
+}
+
+/* ==============================
+ home-menu_system_staff共通
+============================== */
+.section-menu, .section-system, .section-staff {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 392px;
+    margin-bottom: 230px;
+}
+
+.section-about__item {
+    margin-bottom: 150px;
+}
+
+p.home-section__subtitle {
+    font-size: 15px;
+}
+
+.more p {
+    text-align: center;
+    border: solid 1px #333;
+}
+
+.more p:hover {
+    background-color: #FFECCC;
+}
+
+/* ==============================
+ home-menu
+============================== */
+.section-menu__contents {
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 9%;
+}
+
+.section-menu img {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: -4px 4px 2px rgba(0,0,0,0.1);
+    border-radius: 0 3px 3px 0;
+    width: 60%;
+    height: 392px;
+    object-fit: cover;
+}
+
+/* ==============================
+ home-system
+============================== */
+.section-system__contents {
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    left: 9%;
+}
+
+.section-system img {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    box-shadow: -4px 4px 2px rgba(0,0,0,0.1);
+    width: 60%;
+    height: 392px;
+    object-fit: cover;
+}
+
+/* ===============================
+ home-staff
+============================== */
+.section-staff__contents {
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    right: 9%;
+}
+
+.section-staff img {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 3px 3px 0;
+    box-shadow: -4px 4px 2px rgba(0,0,0,0.1);
+    width: 60%;
+    height: 392px;
+    object-fit: cover;
+    object-position: 100% 10%;
+}
+
+/* ==============================
+ home-shop
+=============================== */
+section.section-shop {
+    margin-bottom: 230px;
+}
+
+.section-shop h1 {
+    text-align: center;
+}
+
+.section-shop a:hover {
+    color: #D58221;
+    border-bottom: solid 1px #D58221;
+}
+
+.section-shop table {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.section-shop th {
+    padding: 10px 10px 10px 50px;
+    width: 30%;
+    font-size: 14px;
+    font-weight: lighter;
+    vertical-align: top;
+}
+
+.section-shop td {
+    padding: 10px 10px 10px 30px;;
+    width: 70%;
+    font-size: 14px;
+}
+
+.section-shop td span {
+    text-decoration: underline;
+}
+
+/* ==============================
+ home-contact
+============================== */
+section.section-contact {
+    margin-bottom: 200px;
+}
+
+.section-contact h1, .section-contact p {
+    text-align: center;
+}
+
+.section-contact__item {
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* ==============================
+ home-foot-animation
+============================== */
+.foot-animation {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 0;
+}
+
+.footprint-head {
+    width: 11px;
+    transition: 0.01s;
+    opacity: 0;
+}
+
+img.footprint {
+    width: 11px;
+    height: auto;
+    box-shadow: 0 0 0;
+}
+
+img.footprint-header1 {
+    position: absolute;
+    top: 445px;
+    left: 3%;
+    transform: rotate(180deg);
+}
+
+img.footprint-header2 {
+    position: absolute;
+    top: 477.5px;
+    left: 5%;
+    transform: rotate(180deg);
+}
+
+img.footprint-header3 {
+    position: absolute;
+    top: 510px;
+    left: 3%;
+    transform: rotate(180deg);
+}
+
+img.footprint-header4 {
+    position: absolute;
+    top: 542.5px;
+    left: 5%;
+    transform: rotate(180deg);
+}
+
+img.footprint-header5 {
+    position: absolute;
+    top: 575px;
+    left: 3%;
+    transform: rotate(180deg);
+}
+
+img.footprint-header6 {
+    position: absolute;
+    top: 607.5px;
+    left: 5%;
+    transform: rotate(180deg);
+}
+
+.footprint {
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.footprint.forward {
+    opacity: 1;
+}
+
+img.footprint-1 {
+    position: absolute;
+    top:320px;
+    right: 35%;
+    transform: rotate(125deg);
+}
+
+img.footprint-2 {
+    position: absolute;
+    top: 368px;
+    right: 35%;
+    transform: rotate(125deg);
+}
+
+img.footprint-3 {
+    position: absolute;
+    top: 385px;
+    right: 31.5%;
+    transform: rotate(125deg);
+}
+
+img.footprint-4 {
+    position: absolute;
+    top: 430px;
+    right: 32%;
+    transform: rotate(125deg);
+}
+
+img.footprint-5 {
+    position: absolute;
+    top: -120px;
+    left: 35%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-6 {
+    position: absolute;
+    top: -72px;
+    left: 35%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-7 {
+    position: absolute;
+    top: -55px;
+    left: 31.5%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-8 {
+    position: absolute;
+    top: -10px;
+    left: 32%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-9 {
+    position: absolute;
+    top: -120px;
+    right: 35%;
+    transform: rotate(125deg);
+}
+
+img.footprint-10 {
+    position: absolute;
+    top: -72px;
+    right: 35%;
+    transform: rotate(125deg);
+}
+
+img.footprint-11 {
+    position: absolute;
+    top: -55px;
+    right: 31.5%;
+    transform: rotate(125deg);
+}
+
+img.footprint-12 {
+    position: absolute;
+    top: -10px;
+    right: 32%;
+    transform: rotate(125deg);
+}
+
+img.footprint-13 {
+    position: absolute;
+    top: -140px;
+    left: 60%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-14 {
+    position: absolute;
+    top: -92px;
+    left: 60%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-15 {
+    position: absolute;
+    top: -75px;
+    left: 56.5%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-16 {
+    position: absolute;
+    top: -30px;
+    left: 57%;
+    transform: rotate(-125deg);
+}
+
+img.footprint-17 {
+    position: absolute;
+    top: -120px;
+    right: 65%;
+    transform: rotate(125deg);
+}
+
+img.footprint-18 {
+    position: absolute;
+    top: -72px;
+    right: 65%;
+    transform: rotate(125deg);
+}
+
+img.footprint-19 {
+    position: absolute;
+    top: -55px;
+    right: 61.5%;
+    transform: rotate(125deg);
+}
+
+img.footprint-20 {
+    position: absolute;
+    top: -10px;
+    right: 62%;
+    transform: rotate(125deg);
+}
+
+/* ========================================
+                  MENU
+======================================== */
+.heading {
+    position: relative;
+}
+
+.heading__under {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+}
+
+div.heading__under {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ==============================
+  trimmng-flow
+============================== */
+.trimming-flow {
+    width: 782px;
+    margin: 0 auto 150px auto;
+}
+
+.trimming-flow h1 {
+    margin-bottom: 50px;
+}
+
+.trimming-flow h2 {
+    margin: 16px 0 16px 0;
+    font-size: 19.5px;
+}
+
+.trimming-flow p {
+    margin: 16px 0 16px 0;
+}
+
+.trimming-flow table {
+    margin: 0 auto;
+    width: 585px;
+}
+
+.trimming-flow th {
+    vertical-align: top;
+    padding: 0 0 0 30px;
+    width: 30px;
+    font-size: 19.5px;
+}
+
+.trimming-flow td {
+    margin: 16px 0 16px 0;
+    padding-left: 50px;
+    width: 555px;
+    font-size: 14px;
+}
+
+/* ====================
+  menu共通
+==================== */
+.menu {
+    clear: both;
+    margin-bottom: 150px;
+}
+
+.menu h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.menu h1::before, .menu h1::after {
+    content: "";
+    background-color: #616161;
+    display: inline-block;
+    flex-grow: 1;
+    height: 1px;
+    margin: 0 2rem;
+    vertical-align: middle;
+}
+
+.menu h1::before {
+    margin-left: 10%;
+}
+
+.menu h1::after {
+    margin-right: 10%;
+}
+
+/* ===================
+  Shampoo&Cut
+=================== */
+.shampoo-cut {
+    max-width: 900px;
+    margin: 0 auto 150px auto;
+}
+
+.shampoo-cut h4 {
+    text-align: center;
+    margin: 21px 0;
+}
+
+.shampoo-cut th, .shampoo-cut td {
+    padding: 8px;
+    text-align: left;
+}
+
+.shampoo-cut__item {
+    width: 33%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.menu .shampoo-cut__item:last-child {
+    margin-bottom: 150px;
+}
+
+/* ===================
+Option Menu
+=================== */
+.menu-option h1 {
+    margin-bottom: 70px;
+}
+
+.menu-option th {
+    padding-right: 200px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.menu-option td {
+    padding-bottom: 30px;
+}
+
+/* ===================
+Single Menu
+=================== */
+.menu-single table {
+    margin-bottom: 80px;
+}
+
+.menu-single th {
+    padding-right: 142px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.menu-single td {
+    padding-bottom: 30px;
+}
+
+/* ===================
+  For repeat customer
+=================== */
+.menu-repeat {
+    margin-bottom: 150px;
+}
+
+.menu-repeat > p {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.menu-repeat th, .menu-repeat td {
+    padding: 0 30px 30px 30px;
+}
+
+/* ===================
+  Request
+=================== */
+.request {
+    position: relative;
+    width: 750px;
+    margin: 2em auto 150px auto;
+    padding: 3em 1em;
+    border: dotted 2px #000;
+}
+
+.request .request__title {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 5px;
+    line-height: 1;
+    background-color: #FFFDF5;
+}
+
+.title__under {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+}
+
+div.title__under {
+    text-align: center;
+    font-size: 12px;
+}
+
+.request h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.request p {
+    line-height: 2;
+}
+
+/* ====================
+  Caution
+=================== */
+.caution {
+    position: relative;
+    width: 550px;
+    margin: 2em auto 100px auto;
+    padding: 3em 1em;
+    border: dotted 2px #000;
+}
+
+.caution .caution__title {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 5px;
+    width: 120px;
+    line-height: 1;
+    background-color: #FFFDF5;
+}
+
+.caution h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+/* ========================================
+                  ABOUT
+======================================== */
+.about-section {
+    margin-bottom: 150px;
+}
+
+.about-section__title {
+    margin-bottom: 30px;
+    font-family: neue-kabel, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.about-section h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about-section h1::before, .about-section h1::after {
+    content: "";
+    background-color: #616161;
+    display: inline-block;
+    flex-grow: 1;
+    height: 1px;
+    margin: 0 2rem;
+    vertical-align: middle;
+}
+
+.about-section h1::before {
+    margin-left: 10%;
+}
+
+.about-section h1::after {
+    margin-right: 10%;
+}
+
+.about-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ====================
+ About dog Aco
+====================*/
+.about-dog-aco {
+    position: relative;
+    margin: 0 auto;
+    width: 896px;
+    height: 200px;
+}
+
+.about-dog-aco__contents {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 30%;
+}
+
+.about-dog-aco__contents h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about-dog-aco img{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    border-radius: 3px;
+    object-fit: cover;
+    width: 350px;
+}
+
+img.about-footprint {
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    opacity: 0.1;
+    transform: rotate(-45deg);
+    width: 300px;
+    height: auto;
+}
+
+/* ====================
+ shop
+==================== */
+section.section-contact {
+    margin-bottom: 200px;
+}
+
+.section-shop h1 {
+    text-align: center;
+}
+
+/* ====================
+ Gallery
+==================== */
+.slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ========================================
+                  INFO
+======================================== */
+.staff-section__contents {
+    position: relative;
+    margin: 0 auto 20px auto;
+    width: 620px;
+}
+
+.staff-section__contents img {
+    width: 250px;
+    height: 336px;
+    margin-bottom: 30px;
+}
+
+.staff-section__profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.staff-section__profile h2, .staff-section__paragraph h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.staff-section__paragraph {
+    width: 100%;
+}
+
+.staff-section__profile  > p {
+    margin-bottom: 5px;
+}
+
+.shop-img {
+    width: 620px;
+    margin: 50px auto 0 auto;
+}
+
+.shop-img img {
+    width: 620px;
+    height: auto;
+}
+
+
+/* ========================================
+                  BLOG
+======================================== */
+/* ====================
+posts
+==================== */
+#posts {
+    float: left;
+    margin-bottom: 120px;
+    padding-left: 140px;
+    width: 435px;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+
+.post-header {
+    margin-bottom: 15px;
+}
+
+.post-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-meta {
+    font-size: 12px;
+    padding: 7px 0;
+    color: #555;
+}
+
+.post-content {
+    overflow: hidden;
+}
+
+.post-image {
+    float: left;
+    width: 115px;
+}
+
+.post-body {
+    margin-left: 115px;
+}
+
+/* ====================
+navigation
+==================== */
+.navigation {
+    overflow: hidden;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.prev {
+    float: left;
+    width: 200px;
+}
+
+.next {
+    float: right;
+    width: 200px;
+    text-align: right;
+}
+
+/* ====================
+sidebar
+===================== */
+#sidebar {
+    float: right;
+    margin-bottom: 120px;
+    width: 30%;
+}
+
+.widget {
+    margin-bottom: 25px;
+}
+
+.widget h3 {
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+.widget li {
+    line-height: 1.8;
+}
+
+/* ================================
+pc画面向けレイアウト(1020px~897px)
+=================================== */
+@media only screen and (max-width: 1020px) {
+  /* ========================================
+                  all-common
+  ======================================== */
+  .section-menu img {
+      width: 55%;
+      object-position: 100% 100%;
+  }
+
+  .section-system img {
+      width: 55%;
+      object-position: 60% 40%;
+  }
+
+  .section-staff img {
+      width: 55%;
+      object-position: 40% 60%;
+  }
+}
+
+/* ================================
+タブレット向けレイアウト(896px〜650px)
+=================================== */
+@media only screen and (max-width: 896px) {
+  /* ========================================
+                  all-common
+  ======================================== */
+  #header {
+      height: 150px;
+  }
+
+  .sub-menu {
+      position: static;
+      width: 240px;
+  }
+
+  .sub-menu li {
+      display: block;
+      padding: 0;
+  }
+
+  .global-nav {
+      position: fixed;
+      right: -320px;
+      top: 0;
+      width: 300px;
+      height: 100vh;
+      padding-top: 40px;
+      background-color: #fff;
+      transition: all .6s;
+      z-index: 200;
+      overflow-y: auto;
+  }
+
+  .menu-globalnav-container {
+      width: 300px;
+      height: 500px;
+      margin-top: 80px;
+  }
+
+  #menu-globalnav {
+      position: static;
+  }
+
+  #menu-globalnav > li {
+      display: block;
+      vertical-align: middle;
+      padding: 0 30px;
+  }
+
+  #menu-globalnav a:hover {
+      color: #D58221;
+      border-bottom: solid 2px #D58221;
+  }
+
+  .menu-item a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: #111;
+  }
+
+  .hamburger {
+      position: absolute;
+      right: 5%;
+      top: 15%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 300;
+  }
+
+  .hamburger__line {
+      position: absolute;
+      left: 11px;
+      width: 25px;
+      height: 1px;
+      background-color: #111;
+      transition: all .6s;
+  }
+
+  .hamburger__line--1 {
+      top: 14px;
+  }
+
+  .hamburger__line--2 {
+      top: 23.5px;
+  }
+
+  .hamburger__line--3 {
+      top: 33px;
+  }
+
+  .black-bg {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      background-color: #000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .6s;
+      cursor: pointer;
+  }
+
+  .nav-open .global-nav {
+      right: 0;
+  }
+
+  .nav-open .black-bg {
+      opacity: .8;
+      visibility: visible;
+  }
+
+  .nav-open .hamburger__line--1 {
+      transform: rotate(45deg);
+      top: 20px;
+  }
+
+  .nav-open .hamburger__line--2 {
+      width: 0;
+      left: 50%;
+  }
+
+  .nav-open .hamburger__line--3 {
+      transform: rotate(-45deg);
+      top: 20px;
+  }
+
+  /* ========================================
+                    HOME
+  ======================================== */
+  .section-about section {
+      display: block;
+      width: 33%;
+      height: auto;
+      margin: 0 auto 150px auto;
+  }
+
+  .section-menu img {
+      width: 65%;
+      object-position: 100% 100%;
+      opacity: 0.3;
+  }
+
+  .section-system img {
+      width: 65%;
+      object-position: 60% 40%;
+      opacity: 0.3;
+  }
+
+  .section-staff img {
+      width: 65%;
+      object-position: 40% 60%;
+      opacity: 0.3;
+  }
+
+/*   img.footprint-header1 {
+      top: 368px;
+      left: 2%
+  }
+
+  img.footprint-header2 {
+      top: 400.5px;
+  }
+
+  img.footprint-header3 {
+      top: 433px;
+      left: 2%
+  }
+
+  img.footprint-header4 {
+      top: 465.5px;
+  } */
+
+  img.footprint-header5 {
+      top: 498px;
+      left: 2%
+  }
+
+  img.footprint-header6 {
+      top: 530px;
+  }
+	
+  .footprint-head, .footprint {
+      display: none;
+  }
+
+  /* ========================================
+                    MENU
+  ======================================== */
+  .trimming-flow {
+    width: 650px;
+  }
+
+  .trimming-flow table {
+    width: 650px;
+  }
+
+  .request, .caution {
+    width: 80%;
+  }
+
+  /* ========================================
+                    ABOUT
+  ======================================== */
+  .about-dog-aco {
+    width: 100%;
+    height: 400px;
+  }
+
+  .about-dog-aco__contents {
+    top: 260px;
+    left: 0;
+    bottom: 0;
+    right:0;
+    margin: 0 auto;
+    width: 350px;
+  }
+
+  .about-dog-aco img{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    margin: 0 auto 40px auto;
+    object-fit: cover;
+  }
+
+  img.about-footprint {
+    top: -20px;
+    width: 250px;
+    height: auto;
+  }
+
+  /* ========================================
+                    INFO
+  ======================================== */
+	.shop-img {
+    width: 80%;
+    margin: 50px auto 0 auto;
+  }
+
+  .shop-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ========================================
+                    BLOG
+  ======================================== */
+
+
+/* ================================
+  スマートフォン向けレイアウト(650px〜)
+=================================== */
+  @media only screen and (max-width: 650px) {
+  /* ========================================
+                  all-common
+  ======================================== */
+  #header {
+      height: 120px;
+  }
+
+  .header-logo img {
+      width: 107.625px;
+      height: auto;
+  }
+
+  .main-bg {
+      position: relative;
+      height: 395.25px;
+      margin-bottom: 120px;
+  }
+
+  .main-bg img {
+      top: 0;
+      right: 0;
+      height: 395.25px;
+      object-fit: cover;
+      object-position: 50% 50%;
+  }
+
+  /* ========================================
+                    HOME
+  ======================================== */
+  .section-about {
+      margin-bottom: 120px;
+  }
+
+  .section-about section {
+      float: none;
+      width: 100%;
+      margin-bottom: 50px;
+  }
+
+  .about__item-contents {
+      width: 80%;
+  }
+
+  .section-menu, .section-system, .section-staff {
+      margin-bottom: 120px;
+      height: 200px;
+  }
+
+  .home-section__title {
+      margin: 10px auto 10px auto;
+  }
+
+  p.home-section__subtitle {
+      margin-bottom: 30px;
+  }
+
+  .section-menu__contents h2, .section-menu__contents p,
+  .section-system__contents h2, .section-system__contents p,
+  .section-staff__contents h2, .section-staff__contents p {
+      text-align: center;
+  }
+
+  .more {
+      width: 100px;
+      margin: 0 auto;
+  }
+
+  .home-section__paragraph {
+      display: none;
+  }
+
+  .footprint-head, .footprint {
+      display: none;
+  }
+
+  /* ==============================
+   home-menu
+  ============================== */
+  .section-menu__contents {
+      width: 80%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+  }
+
+  .section-menu img {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 40% 60%;
+  }
+
+  /* ==============================
+  home-system
+  ============================== */
+  .section-system__contents {
+      width: 80%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+  }
+
+  .section-system img {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 40% 60%;
+  }
+
+  /* ==============================
+  home-staff
+  ============================== */
+  .section-staff__contents {
+      width: 80%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+  }
+
+  .section-staff img {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+      height: 200px;
+      object-fit: cover;
+      object-position: 100% 0;
+      opacity: 0.2;
+  }
+
+  /* ==============================
+   home-shop
+  ============================== */
+  section.section-shop {
+      margin-bottom: 100px;
+  }
+
+  .section-shop table {
+      width: 90%;
+  }
+
+  .section-shop th, .section-shop td {
+      padding: 10px;
+  }
+
+  /* ==============================
+   home-contact
+  ============================== */
+  section.section-contact {
+      margin-bottom: 100px;
+  }
+
+  /* ========================================
+                    MENU
+  ======================================== */
+  .menu h1::before {
+    margin-left: 5%;
+  }
+
+  .menu h1::after {
+    margin-right: 5%;
+  }
+
+  .trimming-flow {
+    width: 100%;
+  }
+
+  .trimming-flow h2 {
+    line-height: 30px;
+  }
+
+  .trimming-flow table {
+    width: 80%;
+  }
+
+  .trimming-flow th {
+    width: 10%;
+    padding-left: 0;
+  }
+
+  .trimming-flow td {
+    width: 90%;
+    padding: 0 0 0 20px;
+  }
+
+  .shampoo-cut th, .shampoo-cut td {
+    padding: 8px 30px;
+    text-align: left;
+  }
+
+  .shampoo-cut__item {
+    width: 94%;
+    margin: 0 3% 50px 3%;
+  }
+
+  .menu-option th {
+    padding-right: 30px;
+  }
+
+  .menu-single th {
+    width: 194px;
+    padding-right: 30px;
+  }
+}
+
+  /* ========================================
+                    ABOUT
+  ======================================== */
+  .about-section {
+    margin-bottom: 120px;
+  }
+
+  .about-dog-aco img{
+    margin: 0 auto 60px auto;
+  }
+
+  .about-section h1::before {
+    margin-left: 5%;
+  }
+
+  .about-section h1::after {
+    margin-right: 5%;
+  }
+
+  h1.about-section__title {
+    font-size: 25px;
+  }
+
+  /* ========================================
+                    INFO
+  ======================================== */
+  .staff-section__contents {
+    position: static;
+    width: 100%;
+  }
+
+  .staff-section__img {
+    margin: 0 auto 50px auto;
+    width: 250px;
+    height: 336px;
+  }
+
+  .staff-section__contents img {
+    width: 250px;
+    height: 336px;
+  }
+
+  .staff-section__profile {
+    position: static;
+    margin: 0 auto 30px auto;
+    width: 318px;
+  }
+
+  .staff-section__profile h2, .staff-section__paragraph h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .staff-section__profile  > p {
+    margin-bottom: 5px;
+  }
+
+  .staff-section__paragraph {
+    margin: 0 auto 30px auto;
+    width: 318px;
+  }
+
+  /* ========================================
+                    BLOG
+  ======================================== */
+}
+
+/* ================================
+スマホ向けレイアウト(350px〜)
+=================================== */
+@media only screen and (max-width: 350px) {
+  /* ========================================
+                    MENU
+  ======================================== */
+  h1 {
+    font-size: 20px;
+  }
+
+  .shampoo-cut th, .shampoo-cut td {
+    padding: 8px 15px;
+    text-align: center;
+    width: 50%;
+  }
+
+  .request .request__title {
+    width: 250px;
+  }
+
+  /* ========================================
+                    ABOUT
+  ======================================== */
+  .about-dog-aco__contents {
+    width: 90%;
+  }
+
+  .about-dog-aco img{
+    object-fit: cover;
+    width: 80%;
+    height: 223px;
+  }
+
+}
